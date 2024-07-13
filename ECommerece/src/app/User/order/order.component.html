@@ -1,0 +1,37 @@
+<app-user-nav></app-user-nav>
+
+
+
+<div class="page-wrapper">
+  <div class="content">
+    <div class="container-fluid my-5 ">
+      <button type="button" class="btn btn-primary btn-lg second" (click)="navigateToHome()">Continue Shopping</button>
+      <h2>My Orders <i class="fas fa-shopping-bag"></i></h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6" *ngFor="let order of orders">
+          <div class="card mb-4">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-4">
+                <img [src]="order.productImgUrl" class="card-img-top" alt="{{ order.productDescription }}">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ order.productBrand }}</h5>
+                  <p class="card-text">{{ order.productDescription }}</p>
+                  <p class="card-text">Quantity: {{ order.quantity }}</p>
+                  <p class="card-text">Total Price: {{ order.totalPrice | currency:'INR' }}</p>
+                  <p class="card-text">Order Date: {{ order.orderDate | date:'MMM d, yyyy' }}</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 The Fashion Store. All rights reserved.</p>
+  </footer>
+</div>

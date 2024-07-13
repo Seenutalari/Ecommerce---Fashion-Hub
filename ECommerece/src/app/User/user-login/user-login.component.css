@@ -1,0 +1,92 @@
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 56px;
+  background-color: #fbfbfa;
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://t4.ftcdn.net/jpg/06/52/05/01/240_F_652050149_o1BZcNuwd5J5zd4Oj8E1gzLdcVMLoAWX.jpg');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(0.8px);
+}
+
+.panel {
+  min-height: 380px;
+  box-shadow: 20px 20px 80px rgb(46, 39, 39);
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.panel-heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#forget {
+  min-width: 100px;
+  margin-left: auto;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.form-inline label {
+  padding-left: 10px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.btn {
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.input-field {
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  color: #4343ff;
+  background-color: #f5f5f5;
+}
+
+.input-field.error {
+  border: 1px solid red;
+  color: red;
+}
+
+input[type='email'],
+input[type='password'] {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+
+.store {
+  margin-left: 120px;
+  color: #333;
+}
+.text-center{
+  color: whitesmoke;
+}

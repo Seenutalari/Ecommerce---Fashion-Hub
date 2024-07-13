@@ -1,0 +1,28 @@
+.hello{
+  margin-left: 400px;
+}
+.out{
+  margin-left: 550px;
+}
+.second{
+  margin-top: 100px !important;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+.store{
+  color: #fff;
+}
+.navbar-nav {
+  align-items: center;
+}
+
+.nav-link {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+

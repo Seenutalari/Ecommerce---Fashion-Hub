@@ -1,0 +1,106 @@
+<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-fluid">
+    <i class="bi bi-cart navbar-brand"></i>
+    <a class="navbar-brand" href="#">Fashion Store</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item me-2">
+          <a class="nav-link active admin" [routerLink]="['/admin/login']">Admin</a>
+        </li>
+        <li class="nav-item me-2">
+          <a class="nav-link active sign" [routerLink]="['/user/login']">Hello, sign in</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+   <div class="login-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card shadow-sm my-5">
+            <div class="card-header bg-primary text-white text-center py-4">
+              <h3>Register</h3>
+            </div>
+            <div class="card-body p-4">
+              <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="name" name="name" formControlName="name" placeholder="Enter your name" required>
+                  </div>
+                  <small class="text-danger" *ngIf="signUpForm.controls['name'].dirty && signUpForm.hasError('required','name')">*Name is required</small>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                    </div>
+                    <input type="email" class="form-control" id="email" name="email" formControlName="email" placeholder="Enter your email" required>
+                  </div>
+                  <small class="text-danger" *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')">*Email is required</small>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control" id="password" name="password" formControlName="password" placeholder="Enter your password" required>
+                  </div>
+                  <small class="text-danger" *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')">*Password is required</small>
+                </div>
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword" placeholder="Confirm your password" required>
+                  </div>
+                  <small class="text-danger" *ngIf="signUpForm.controls['confirmPassword'].dirty && signUpForm.hasError('required','confirmPassword')">*Confirm Password is required</small>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                    </div>
+                    <input type="tel" class="form-control" id="phone" name="phone" formControlName="phone" placeholder="Enter your phone number" required>
+                  </div>
+                  <small class="text-danger" *ngIf="signUpForm.controls['phone'].dirty && signUpForm.hasError('required','phone')">*Phone is required</small>
+                </div>
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="city" name="city" formControlName="city" placeholder="Enter your city" required>
+                  </div>
+                  <small class="text-danger" *ngIf="signUpForm.controls['city'].dirty && signUpForm.hasError('required','city')">*City is required</small>
+                </div>
+                <div class="form-group text-center">
+                  <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                </div>
+                <div class="form-group text-center">
+                  <p>Already have an account? <a [routerLink]="['/user/login']">Login</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

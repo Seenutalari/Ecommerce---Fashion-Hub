@@ -1,0 +1,44 @@
+<app-user-nav></app-user-nav>
+<div class="page-wrapper">
+  <div class="content">
+    <div class="container-fluid second">
+      <h2>Cart Items <i class="fas fa-shopping-cart"></i></h2>
+      <div class="d-flex justify-content-end mt-3 mb-3">
+        <button class="btn btn-success me-2" (click)="buyNow()">
+          <i class="bi bi-cart-check"></i> Buy Now
+        </button>
+        <button class="btn btn-danger" (click)="clearCart()">
+          <i class="bi bi-trash"></i> Clear Cart
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4" *ngFor="let item of cartItems">
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img [src]="item.imageUrl" class="img-fluid rounded-start" alt="{{ item.productDescription }}">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.productBrand }}</h5>
+                  <p class="card-text">{{ item.productDescription }}</p>
+                  <p class="card-text">Quantity: {{ item.quantity }}</p>
+                  <p class="card-text">
+                    <span class="text-danger">{{ item.totalPrice | currency:'INR' }}</span>
+                    <button class="btn btn-danger btn-sm float-end" (click)="removeFromCart(item.productId)">
+                      <i class="bi bi-trash"></i> Remove
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 The Fashion Store. All rights reserved.</p>
+  </footer>
+</div>

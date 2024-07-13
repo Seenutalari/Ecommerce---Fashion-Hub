@@ -1,0 +1,260 @@
+/* 
+.fade-in {
+  animation: fadeIn ease 0.5s;
+  -webkit-animation: fadeIn ease 0.5s;
+  -moz-animation: fadeIn ease 0.5s;
+  -o-animation: fadeIn ease 0.5s;
+  -ms-animation: fadeIn ease 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+ .outer{
+  height: 100vh;
+  background-image:url('https://img.freepik.com/premium-photo/empty-wood-table-top-with-blur-clothing-boutique-display-interior-shopping-mall-background_979131-7739.jpg?w=900');
+
+}
+
+.panel-heading{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#forget{
+  min-width: 100px;
+  margin-left: auto;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover{
+  text-decoration: none;
+}
+
+.form-inline label{
+  padding-left: 10px;
+  margin: 0;
+  cursor: pointer;
+}
+.btn{
+  margin-top: 20px;
+  border-radius: 15px;
+}
+.panel{
+  min-height: 380px;
+  box-shadow: 20px 20px 80px rgb(218, 218, 218);
+  border-radius: 12px;
+  margin-top: 50px;
+}
+
+.input-field{
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  color:#4343ff;
+}
+
+.input-field.error{
+  border: 1px solid red;
+  color:red;
+}
+
+input[type='text'],
+input[type='password']{
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+.n{
+  margin-top: 100px;
+}
+.store{
+  margin-left: 120px;
+}
+.container{
+  margin-top: 56px;
+} */
+.parent {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: stretch;
+}
+
+.left-section {
+  background: url('https://img.freepik.com/premium-vector/man-freelancer-sits-table-cafe-working-laptop-remote-worker-drinking-beverage-coworking-space-workplace-cafeteria-restaurant_575670-1291.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1702771200&semt=ais') no-repeat center center;
+  display: none;
+}
+
+.right-section {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgb(10 75 90);
+  width: 100%;
+  max-width: 450px;
+}
+
+.login-form h2 {
+  color: #ffb144;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.login-title i {
+  margin-right: 10px;
+  color: #027186;
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.form-control i {
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  color: #32495e;
+}
+
+.form-control input {
+  width: 100%;
+  max-width: 95%;
+  padding: 12px 37px 12px 37px;
+  border: 2px solid #00569f1c;
+  background-color: rgb(232, 232, 232);
+  color: rgb(50, 73, 94);
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out 0s;
+
+}
+
+.form-control input:focus {
+  outline: none;
+  border: 2px solid #ffd8a1;
+}
+.form-control small {
+  margin-left: 37px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: #32495e;
+}
+
+.form-control input:invalid:not(:focus):not(:placeholder-shown) {
+  border: 2px solid #ff3860;
+}
+.form-control i.icon {
+  position: absolute;
+  left: 15px;
+  color: #32495e;
+}
+.form-control .password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  cursor: pointer;
+  color: #32495e;
+}
+
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffaa33;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #405d7d;
+}
+
+/*Responsive*/
+@media screen and (min-width: 768px) {
+  .left-section {
+      display: block;
+      /* Show the left section on larger screens */
+      flex: 1;
+  }
+}

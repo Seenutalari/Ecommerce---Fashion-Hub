@@ -1,0 +1,42 @@
+<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body n1" data-bs-theme="dark" id="navbar">
+  <div class="container-fluid">
+    <i class="bi bi-cart navbar-brand"></i>
+    <a class="navbar-brand" [routerLink]="['/admindashboard']">Fashion Store</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/admindashboard']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/addproducts']">Add Products</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Category
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="showCategoryTable()">All Categories</a>
+            <a class="dropdown-item" [routerLink]="['/addcategories']">Add Categories</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/userDetails']">Users</a>
+        </li>
+      </ul>
+      <div class="ms-auto">
+        <button (click)="logout()" class="btn btn-outline-danger nav-link out">
+          <span class="fa-solid fa-sign-out-alt"></span> Log Out
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<ng-container *ngIf="showModal">
+  <app-category-table (closeModal)="showModal = false"></app-category-table>
+</ng-container>
+

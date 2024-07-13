@@ -1,0 +1,47 @@
+<app-user-nav></app-user-nav>
+
+<div class="page-wrapper">
+  <div class="content">
+    <div class="container-fluid my-5 second">
+      <div class="row">
+        <div class="col-md-12" *ngFor="let category of categories">
+          <div class="card c2 mb-4">
+            <div class="card-body">
+              <h1 class="card-title cname">{{ category.categoryName }}</h1>
+              <p class="category-description">{{ category.description }}</p>
+              <div class="row">
+                <div class="col-md-3" *ngFor="let product of productsByCategory[category.id]">
+                  <div class="card mb-3 product-card">
+                    <img src="{{ product.imgUrl }}" class="rounded product-image" alt="{{ product.brand }}">
+                  <div class="card-body">
+                    <h6 class="card-title">{{ product.brand }}</h6>
+                    <p class="card-text product-description">{{ product.productDescription }}</p>
+                    <p class="card-text product-price">Price: &#8377; {{ product.price }}</p>
+                    <div><label>Quantity:</label></div>
+                    <div class="input-group" style="width: 120px;">
+                      <input type="number" min="1" max="10" value="1" class="form-control" min="1" [(ngModel)]="product.quantity" name="quantity">
+                    <button class="btn btn-primary add-to-cart" (click)="addToCart(product)" [disabled]="product.isAddedToCart">
+                      {{ product.isAddedToCart ? 'Added to Cart' : 'Add to Cart' }}
+                    </button>
+                  </div>
+                </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 The Fashion Store. All rights reserved.</p>
+  </footer>
+</div>
+
+<router-outlet></router-outlet>
+
+
+
+

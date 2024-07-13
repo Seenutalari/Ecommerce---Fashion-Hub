@@ -1,0 +1,56 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="page-wrapper">
+  <div class="content">
+    <div class="container-fluid my-5 second">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="mb-4 heading">Orders for User {{ userId }}</h2>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Order Date</th>
+                  <th>Total Amount</th>
+                  <th>Order Items</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let order of orders">
+                  <td>{{ order.id }}</td>
+                  <td>{{ order.orderDate | date }}</td>
+                  <td>{{ order.totalAmount | currency : 'INR' }}</td>
+                  <td>
+                    <table class="table table-striped table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Product</th>
+                          <th>Quantity</th>
+                          <th>Price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of order.orderItems; let i = index">
+                          <td>{{ i + 1 }}</td>
+                          <td>{{ item.productBrand }}</td>
+                          <td>{{ item.quantity }}</td>
+                          <td>{{ item.totalPrice | currency : 'INR' }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 The Fashion Store. All rights reserved.</p>
+  </footer>
+</div>

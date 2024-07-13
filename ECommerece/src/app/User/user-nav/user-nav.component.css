@@ -1,0 +1,9 @@
+.nav-link.text-white {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+.navbar-bg-custom {
+  background-color:rgb(16, 15, 15) !important;
+
+}

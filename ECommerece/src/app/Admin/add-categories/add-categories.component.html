@@ -1,0 +1,22 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="page-wrapper">
+  <div class="content">
+    <div class="container-fluid second">
+      <h2>Add Category</h2>
+      <form [formGroup]="addCategoryForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="categoryName">Category Name</label>
+          <input type="text" class="form-control col-md-6" id="categoryName" formControlName="categoryName" required>
+          <label for="description">Category Description</label>
+          <input type="text" class="form-control col-md-8" id="description" formControlName="description" required>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="addCategoryForm.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 The Fashion Store. All rights reserved.</p>
+  </footer>
+</div>

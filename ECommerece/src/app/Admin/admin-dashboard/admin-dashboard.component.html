@@ -1,0 +1,39 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="page-wrapper">
+  <div class="content">
+    <div class="container-fluid second">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Product Code</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col" class="img-url-column">Image Url</th>
+            <th scope="col">Manage Products</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ product.brand }}</td>
+            <td>{{ product.productCode }}</td>
+            <td>{{ product.productDescription }}</td>
+            <td>&#8377;{{ product.price }}</td>
+            <td class="img-url-container">{{ product.imgUrl }}</td>
+            <td>
+              <button class="btn btn-primary me-2" (click)="editProduct(product)">Edit</button>
+              <button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 The Fashion Store. All rights reserved.</p>
+  </footer>
+</div>

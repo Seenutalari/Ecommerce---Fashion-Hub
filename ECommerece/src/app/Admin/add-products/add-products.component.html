@@ -1,0 +1,40 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="page-wrapper">
+  <div class="content">
+    <div class="container-fluid second">
+      <h2>Add Product</h2>
+      <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="brand">Brand</label>
+          <input type="text" class="form-control col-md-6" id="brand" formControlName="brand" required>
+        </div>
+        <div class="form-group">
+          <label for="productName">Product Code</label>
+          <input type="number" class="form-control col-md-6" id="productName" formControlName="productCode" required>
+        </div>
+        <div class="form-group">
+          <label for="productDescription">Description</label>
+          <textarea class="form-control col-md-6" id="productDescription" formControlName="productDescription" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" class="form-control col-md-6" id="price" formControlName="price" required>
+        </div>
+        <div class="form-group">
+          <label for="categoryId">Category ID</label>
+          <input type="number" class="form-control col-md-6" id="categoryId" formControlName="categoryId" required>
+        </div>
+        <div class="form-group">
+          <label for="imgUrl">Image Url</label>
+          <input type="text" class="form-control col-md-6" id="imgUrl" formControlName="imgUrl" required>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="addProductForm.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 The Indianrestaurant. All rights reserved.</p>
+  </footer>
+</div>

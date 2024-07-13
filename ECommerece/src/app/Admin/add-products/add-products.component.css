@@ -1,0 +1,23 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1 0 auto;
+  padding: 20px 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.second {
+  margin-top: 60px !important;
+  margin-left: 100px;
+}
